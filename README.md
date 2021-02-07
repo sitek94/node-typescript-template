@@ -13,8 +13,21 @@ might save some time in the future.
 * `dotenv`
 * `cors`
 * `nodemon`
+* `mongodb`|`mongoose`
 
 ## Installation
+
+### MongoDB Atlas
+Use your existing account or create a new one. If you don't know how to do that, you can 
+follow [step by step tutorial by freeCodeCamp](https://www.freecodecamp.org/learn/apis-and-microservices/mongodb-and-mongoose/).
+
+Once you have connected to your cluster, use `.env.example` to create your `.env` file.
+
+```env
+MONGODB_URI=mongodb+srv://<user_name>:<user_password>@main.3hfb6.mongodb.net/<db_name>?retryWrites=true&w=majority
+
+MONGODB_URI_LOCAL=mongodb://localhost:27017/<db_name>
+```
 
 ### Install dependencies
 ```bash
