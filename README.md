@@ -24,7 +24,7 @@ follow [step by step tutorial by freeCodeCamp](https://www.freecodecamp.org/lear
 Once you have connected to your cluster, use `.env.example` to create your `.env` file.
 
 ```env
-MONGODB_URI=mongodb+srv://<user_name>:<user_password>@main.3hfb6.mongodb.net/<db_name>?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://<user>:<password>@<cluster#-dbname>.mongodb.net/test
 
 MONGODB_URI_LOCAL=mongodb://localhost:27017/<db_name>
 ```
