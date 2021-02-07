@@ -1,27 +1,16 @@
-import express from 'express';
-import cors from 'cors';
-import path from 'path';
-import routes from './routes';
+import app from './app';
 
-const app = express();
+/**
+ * Start Express server
+ */
+const server = app.listen(app.get('port'), () => {
+  console.log(
+    '  App is running at http://localhost:%d in %s mode',
+    app.get('port'),
+    app.get('env')
+  );
 
-// Middlewares
-app.use(cors({ optionsSuccessStatus: 200 }));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Serve static files
-app.use(express.static('public'));
-
-// Homepage route
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve('views/index.html'));
+  console.log('  Press CTRL-C to stop\n');
 });
 
-// Routes
-app.use('/api', routes);
-
-const PORT = process.env.PORT || 5000;
-
-// Start server
-app.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`));
+export default server;
